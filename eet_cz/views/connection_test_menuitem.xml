@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_test_connection" model="ir.actions.act_window">
+        <field name="name">Test Connection</field>
+        <field name="res_model">eet.connection.test</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem name="EET" id="menu_eet" parent="point_of_sale.menu_point_config_product"
+        groups="point_of_sale.group_pos_manager" />
+
+    <menuitem name="Test Connection" id="menu_eet_test_connection" parent="menu_eet"
+        action="action_test_connection" />
+</odoo>

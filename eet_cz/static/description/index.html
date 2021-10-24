@@ -1,0 +1,149 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2>Installing Module</h2>
+        <p>Install <b>EET (CZ)</b> module (technical name: eet_cz) in your Odoo instance, and add the following configurations:</p>
+        <ol>
+            <li>Configure certificates and their passwords for playground and production environment under Settings >> Technical >> Parameters >> System Parameters.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="configure_playground_cert.png" style="height:400px;"/>
+            </div>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="configure_playground_cert_password.png" style="height:400px;"/>
+            </div>
+            <li>Configure tax ID, and sale regime on company card.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="company_configurations.png" style="height:400px;"/>
+            </div>
+            <li>Configure establishment registration number on shop under Point of Sale >> Configuration >> Point of Sale.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="pos_config.png" style="height:400px;"/>
+            </div>
+            <li>Test your connection under Point of Sale >> Configuration >> EET >> Test Connection. Check the registered data message under Point of Sale >> Configuration >> EET >> Data Messages.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="test_connection_playground.png" style="height:400px;"/>
+            </div>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="test_data_message.png" style="height:400px;"/>
+            </div>
+            <li>Configure taxes under Invoicing >> Configuration >> Accounting >> Taxes. Below is the basic VAT Rate configured.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="configure_basic_vat.png" style="height:400px;"/>
+            </div>
+        </ol>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2>Register Normal Sales</h2>
+        <ol>
+            <li>Configure the tax in product.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="configure_tax_in_product.png" style="height:400px;"/>
+            </div>
+            <li>Sale Product through POS. Verify Tax ID, Premises ID, and FIK code on receipt. Note: Here, there is PKP code instead of FIK, due to invalid production certificate configured.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="receipt.png" style="height:400px;"/>
+            </div>
+        </ol>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2>Register Normal Sales With Appointing Taxpayer.</h2>
+        <ol>
+            <li>Configure Tax ID on appointing taxpayer card under Purchase >> Purchase >> Vendors.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="supplier_configuration.png" style="height:400px;"/>
+            </div>
+            <li>Configure authorized taxpayer on product card.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="product_auth_taxpayer_configuration.png" style="height:400px;"/>
+            </div>
+            <li>Verify appointing taxpayer tax ID on receipt.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="verify_auth_taxpayer_on_receipt.png" style="height:400px;"/>
+            </div>
+        </ol>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2>Registration of sales through direct representation</h2>
+        <p>When selling through direct representation, the data messages are signed using the certificate of the authorising taxpayer, and authorising taxpayer<span>&#39;</span>s tax ID is displayed on receipts.</p>
+        <ol>
+            <li>Configure tax ID, establishment reg. no., and sale regime on authorising taxpayer card. Attach the certificate, and configure the certificate password.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="configure_cert_on_supplier.png" style="height:400px;"/>
+            </div>
+            <li>Enable direct representation and configure authorizing taxpayer on product card.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="enable_direct_repr_on_product.png" style="height:400px;"/>
+            </div>
+            <li>Sale product through POS and verify tax ID and premises ID on receipt. That shall be of authorising taxpayer.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="delegation_sales.png" style="height:400px;"/>
+            </div>
+        </ol>  
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2>Registration of sold travel services.</h2>
+        <ol>
+            <li>Configure a service type product with travel service ticked.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="travel_services.png" style="height:400px;"/>
+            </div>
+        </ol>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2>Registration of used goods sales.</h2>
+        <ol>
+            <li>Enable used goods configuration on product card.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="used_goods.png" style="height:400px;"/>
+            </div>
+        </ol>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2>Registration of deposit and managing withdrawal</h2>
+        <ol>
+            <li>Configure a coupon type product. If customer taxes configured, then the coupon shall be considered as a deposit with predetermined tax rate. Deposit and withdrawal shall be reflected in urceno_cerp_zuct and cerp_zuct columns respectively.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="coupon_card.png" style="height:400px;"/>
+            </div>
+            <li>Issue coupons to customers by selling them through POS.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="issue_coupon.png" style="height:400px;"/>
+            </div>
+            <li>Redeem coupons against purchases through managing negative quantity for coupon and the positive price that is redeemed (either full or partial).</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="redeem_coupon.png" style="height:400px;"/>
+            </div>
+            <li>Refund deposit to customer by keeping quantity positive and amount negative for the coupon product.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="refund_coupon.png" style="height:400px;"/>
+            </div>
+        </ol>
+        <h4>Things to take care when redeeming coupons</h4>
+        <p>In order to register withdrawals correctly, please ensure that a single data message is generated per POS order. For instance, selling untaxed products and taxed products together can result in two different data messages for single POS order.</p>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2>Resend failed messages</h2>
+        <ol>
+            <li>Failed messages can be sent again using Resend button available on sales data message cards. This functionality is only helpful when messages gets registered in Odoo, but there is a failure in getting valid FIK due to no active Internet connection.</li>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="resend_messages.png" style="height:400px;"/>
+            </div>
+        </ol>

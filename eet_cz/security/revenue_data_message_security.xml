@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_revenue_data_message_multi_company" model="ir.rule">
+        <field name="name">Revenue Data Message</field>
+        <field name="model_id" ref="model_revenue_data_message" />
+        <field name="global" eval="True" />
+        <field name="domain_force">[('company_id', '=', user.company_id.id)]</field>
+    </record>
+</odoo>

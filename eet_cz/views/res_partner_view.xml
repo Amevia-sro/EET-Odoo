@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="form_inherit_supplier_tax_config">
+        <field name="name">form.inherit.supplier.tax.config</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <!-- TODO: Widget to update attributes from parent remaining to do. -->
+                <field name="estd_reg_no"
+                    attrs="{'readonly': [('parent_id', '!=', False)]}" widget=""/>
+                <field name="sale_regime"
+                    attrs="{'readonly': [('parent_id', '!=', False)]}" widget=""/>
+                <field name="cert_password" password="True"/>
+            </field>
+        </field>
+    </record>
+</odoo>
+
