@@ -35,6 +35,9 @@ Configure the absolute path as value showing location of the certificate situate
         'data/payment_data.xml',
         'data/certificate_details.xml',
     ],
+    'images': [
+        'static/description/logo.png',
+    ],
     'qweb': ['static/src/xml/pos.xml'],
     'external_dependencies': {'python': ['OpenSSL']},
     'installable': True,
