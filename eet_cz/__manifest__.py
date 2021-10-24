@@ -4,6 +4,7 @@
     'name': 'EET (CZ)',
     'version': '1.0',
     'author': 'Amevia s.r.o.',
+    'website': 'www.amevia.eu',
     'summary': 'Registration of Sales',
     'description': """
 Registration of Sales
