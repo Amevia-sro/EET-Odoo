@@ -18,7 +18,7 @@ Install the following python package:
 Configure the absolute path as value showing location of the certificate situated in server into the system parameter with key pkcs12.
     """,
     'category': 'Point Of Sale',
-    'depends': ['point_of_sale', 'l10n_cz'],
+    'depends': ['point_of_sale', 'Czech_l10n_cz'],
     'data': [
         'security/revenue_data_message_security.xml',
         'security/ir.model.access.csv',
