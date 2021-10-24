@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_revenue_data_message" model="ir.actions.act_window">
+        <field name="name">Sales Data Messages</field>
+        <field name="res_model">revenue.data.message</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Data Messages" id="menu_revenue_data_message" parent="menu_eet"
+        action="action_revenue_data_message" />
+</odoo>

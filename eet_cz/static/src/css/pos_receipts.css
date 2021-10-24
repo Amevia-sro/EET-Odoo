@@ -1,0 +1,10 @@
+.pos-receipt .eet-header {
+    text-align: center;
+    font-size: 75%;
+}
+
+.pos-receipt .eet-footer {
+    text-align: center;
+    font-size: 75%;
+    word-break: break-all;
+}
